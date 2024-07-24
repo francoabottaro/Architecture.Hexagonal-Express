@@ -22,6 +22,6 @@ export class UserEdit {
     );
     const userExist = await this.repository.getOneById(user.id);
     if (!userExist) throw new UserNotFoundError("User not found");
-    return await this.repository.create(user);
+    return await this.repository.edit(user);
   }
 }

@@ -1,6 +1,6 @@
 import * as express from "express";
 import { Request, Response, NextFunction } from "express";
-import { ExpressUserRouter } from "./User/infrastructure/ExpressUserRouter";
+import { ExpressUserRouter } from "./lib/User/infrastructure/ExpressUserRouter";
 
 const app = express();
 
