@@ -5,7 +5,8 @@ export class UserEmail {
     this.ensureIsValid();
   }
   private ensureIsValid() {
-    if (!(this.value.includes("@") && this.value.includes("."))) {
+    const mailIsValid = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+    if (mailIsValid.test(this.value)) {
       throw new Error(`Email must be a valid mail address`);
     }
   }
