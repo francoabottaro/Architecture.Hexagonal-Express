@@ -6,7 +6,8 @@ export class UserEmail {
   }
   private ensureIsValid() {
     const mailIsValid = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
-    if (mailIsValid.test(this.value)) {
+    console.log();
+    if (!mailIsValid.test(this.value)) {
       throw new Error(`Email must be a valid mail address`);
     }
   }
